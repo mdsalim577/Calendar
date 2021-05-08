@@ -55,7 +55,7 @@ function App() {
           ))}
         </div>
       </div>
-
+      {/* For handling events */}
       {
         clicked && !eventForDate(clicked) &&
         <NewEventModal
