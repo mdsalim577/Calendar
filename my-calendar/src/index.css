@@ -1,7 +1,7 @@
 
 body {
   display: flex;
-  /* margin-top: px; */
+  margin-top: 40px;
   justify-content: center;
   background-color: #FFFCFF;
   
@@ -25,15 +25,15 @@ button:hover{
 }
 #header {
   padding: 10px;
-  color: #7ed7f0;
-  font-size: 26px;
-  font-family: sans-serif;
+  color: #052b36;
+  font-size: 32px;
+  font-family: 'Courier New', Courier, monospace;
   display: flex;
   justify-content: space-between;
   /* margin-top:20px; */
 }
 #header button {
-  background-color:#92a1d1;
+  background-color:#acbaec;
 }
 #container {
   width: 770px;
