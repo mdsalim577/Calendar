@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-export const useDate = (events, nav) => {
+export const useDate = (events, nav, navYear) => {
   const [dateDisplay, setDateDisplay] = useState('');
   const [days, setDays] = useState([]);
 
@@ -12,6 +12,9 @@ export const useDate = (events, nav) => {
 
     if (nav !== 0) {
       dt.setMonth(new Date().getMonth() + nav);
+    }
+    if (navYear !== 0){
+      dt.setFullYear(new Date().getFullYear() + navYear);
     }
 
     const day = dt.getDate();
@@ -27,7 +30,7 @@ export const useDate = (events, nav) => {
       day: 'numeric',
     });
 
-    setDateDisplay(`${dt.toLocaleDateString('en-us', { month: 'long' })} ${year}`);
+    setDateDisplay(`${dt.toLocaleDateString('en-us', { month: 'long', year: 'numeric' })}` );
     const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
 
     const daysArr = [];
@@ -53,7 +56,7 @@ export const useDate = (events, nav) => {
     }
 
     setDays(daysArr);
-  }, [events, nav]);
+  }, [events, nav, navYear]);
 
   return {
     days,

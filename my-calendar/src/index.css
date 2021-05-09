@@ -18,6 +18,7 @@ button {
   padding: 5px;
   border-radius: 5px;
   color: white;
+  
 }
 
 button:hover{
@@ -26,7 +27,7 @@ button:hover{
 #header {
   padding: 10px;
   color: #052b36;
-  font-size: 32px;
+  font-size: 36px;
   font-family: 'Courier New', Courier, monospace;
   display: flex;
   justify-content: space-between;
@@ -43,6 +44,7 @@ button:hover{
   width: 100%;
   display: flex;
   color: #247BA0;
+  font-family: 'Courier New', Courier, monospace;
 }
 #weekdays div {
   width: 100px;
@@ -66,6 +68,7 @@ button:hover{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: 'Courier New', Courier, monospace;
 }
 .day:hover {
   background-color: #e8faed;

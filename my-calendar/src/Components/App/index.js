@@ -7,6 +7,7 @@ import  {useDate}  from '../../Hooks';
 
 function App() {
   const [nav, setNav] = useState(0);
+  const [navYear, setNavYear] = useState(0);
   const [clicked, setClicked] = useState();
   const [events, setEvents] = useState(
     localStorage.getItem('events') ? 
@@ -20,7 +21,7 @@ function App() {
     localStorage.setItem('events', JSON.stringify(events));
   }, [events]);
 
-  const { days, dateDisplay } = useDate(events, nav);
+  const { days, dateDisplay } = useDate(events, nav, navYear);
 
   return(
     <>
@@ -29,6 +30,10 @@ function App() {
           dateDisplay={dateDisplay}
           onNext={() => setNav(nav + 1)}
           onBack={() => setNav(nav - 1)}
+          onNextYear={() => setNavYear(navYear +1)}
+          onPrevYear={() => setNavYear(navYear -1)}
+          onToday = {() => {setNavYear(0);
+                       setNav(0);}}
         />
 
         <div id="weekdays">
