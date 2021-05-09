@@ -42,7 +42,7 @@ export const useDate = (events, nav, navYear) => {
         daysArr.push({
           value: i - paddingDays,
           event: eventForDate(dayString),
-          isCurrentDay: i - paddingDays === day && nav === 0,
+          isCurrentDay: i - paddingDays === day && nav === 0 && navYear===0,
           date: dayString,
         });
       } else {
